@@ -83,7 +83,9 @@ INSTANTIATE_TEST_SUITE_P(
         "Match_FillOrKill_Miss.txt",
         "Cancel_Success.txt",
         "Modify_Side.txt",
-        "Match_Market.txt"
+        "Match_Market.txt",
+        "Invalid_Order_Line.txt",
+        "Wrong_Line_Result.txt"
     })
 );
 
