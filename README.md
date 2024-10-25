@@ -43,7 +43,7 @@ sudo apt-get install cmake # if not already installed
 
 For other systems, follow instructions on the [GoogleTest GitHub page](https://github.com/google/googletest)
 
-##Build the Project
+## Build the Project
   1. Create Build Directory:
 
   ```bash
@@ -96,8 +96,11 @@ g++ -std=c++20 -o main main.cpp Orderbook.cpp -I/usr/local/include -L/usr/local/
 When running main with your own input file, use the following structure:
 
 Add Order: A <side> <order_id> <price> <quantity> <order_type>
+
 Modify Order: M <order_id> <new_price> <new_quantity>
+
 Cancel Order: C <order_id>
+
 Result Line: R <result_code>
 
 Example Input File Structure: 
@@ -108,11 +111,15 @@ M 100 12 1  # Modify order with ID 100, new price 12, new quantity 1
 C 200        # Cancel order with ID 200
 R 0 0 0     # Result line indicating end of commands
 ```
-<Side>: Indicates whether the order is a Buy (B) or Sell (S).
-<OrderId>: Unique identifier for the order.
-<OrderType>: Type of the order. Can be GoodTillCancel, FillAndKill, FillOrKill, etc.
-<Price>: Price of the order.
-<Quantity>: Quantity of the order.
+Side: Indicates whether the order is a Buy (B) or Sell (S).
+
+OrderId: Unique identifier for the order.
+
+OrderType: Type of the order. Can be GoodTillCancel, FillAndKill, FillOrKill, etc.
+
+Price: Price of the order.
+
+Quantity: Quantity of the order.
 
 R: Result line indicating expected bid, ask, and trade counts.
 
